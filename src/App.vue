@@ -1,32 +1,37 @@
 <template>
+
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+
+    <!-- Navigation bar component -->
+    <Navbar></Navbar>
+
+    <router-view />
+
+    <!-- Footer component with credits and everything -->
+    <!-- TODO: Implement the footer component -->
+
   </div>
+
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Navbar from '@/components/Navbar.vue';
+import UIkit from "uikit";
+import Icons from "uikit/dist/js/uikit-icons";
 
-#nav {
-  padding: 30px;
+UIkit.use(Icons);
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default {
+  name: 'App',
+  components: {
+    Navbar
   }
 }
+</script>
+
+<style lang="less">
+  @import "../node_modules/uikit/src/less/uikit.less";
+  @import "./assets/theme.less";
+
+  
 </style>

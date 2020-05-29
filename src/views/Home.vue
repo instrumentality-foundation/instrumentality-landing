@@ -1,18 +1,35 @@
 <template>
+
+  <!-- Main page wrapper component -->
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <!-- Page content -->
+    <TypedHeader class="uk-text-center uk-margin-large-top" />
+
+    <HomeMainSection />
+
+    <Paths />
+
   </div>
+
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import TypedHeader from '@/components/HomeComponents/TypedHeader.vue';
+import HomeMainSection from '@/components/HomeComponents/MainSection.vue';
+import Paths from '@/components/HomeComponents/Paths.vue'
 
 export default {
   name: 'Home',
+
   components: {
-    HelloWorld
+    TypedHeader,
+    HomeMainSection,
+    Paths
   }
 }
 </script>
+
+<style lang="less" scoped>
+
+</style>
