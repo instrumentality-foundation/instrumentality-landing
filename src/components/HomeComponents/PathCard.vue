@@ -23,7 +23,7 @@ export default {
     name: 'PathCard',
     props: {
         pathName: String,
-        features: [],
+        features: Array,
         price: String
     }
 }
@@ -38,18 +38,19 @@ export default {
 
     .uk-card {
         background: white;
-        margin: 12px;
+        margin-bottom: 1em;
     }
 
     ul {
         list-style: none;
         color: @text-color;
         font-family: 'Noto Sans', sans-serif;
-        font-size: calc(12px + (32 - 12) * ((100vw - 320px) / (3840 - 320)));
+        font-size: 1em;
+        padding: 0;
     }
 
     ul li {
-        margin-bottom: 5px;
+        margin-bottom: .5em;
     }
 
     p, h3 {
@@ -58,10 +59,43 @@ export default {
     }
 
     h3 {
-        font-size: calc(12px + (48 - 12) * ((100vw - 320px) / (3840 - 320)));
+        font-size: 1.2em;
     }
 
     p {
-        font-size: calc(12px + (28 - 12) * ((100vw - 320px) / (3840 - 320)));
+        font-size: .85em;
     }
+
+    @media only screen and (min-width: 960px) {
+        .pathcard {
+            width: 32%;
+        }
+
+        ul {
+            font-size: 1.2em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+    }
+
+    @media only screen and (min-width: 2560px) {
+        ul {
+            font-size: 1.5em;
+        }
+
+        h3 {
+            font-size: 1.7em;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+    }
+
 </style>

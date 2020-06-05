@@ -37,26 +37,52 @@ export default {
 <style lang="less" scoped>
 @import "../../assets/theme.less";
 
-@min-size: 32;
-@max-size: 128;
-
-#typewriter {
+h1#typewriter {
     font-family: 'Cantarell', sans-serif;
-    cursor: default;
-    font-size: calc(32px + (@max-size - @min-size) * ((100vw - 320px) / (@max-vw - @min-vw)));
+    font-size: 2em;
     color: @text-color-dark;
 }
 
 #subtitle {
     font-family: 'Cantarell', sans-serif;
     color: @text-color-dark;
-    cursor: default;
-    font-size: calc(16px + ((@max-size - 32) - (@min-size - 16)) * ((100vw - 320px) / (@max-vw - @min-vw)));
+    font-size: 1.5em;
 }
 
 #subtitle span {
     color: @brand-color-dark;
     font-weight: bold;
+}
+
+// As screen size goes up...
+
+// What happens with Tablets
+@media only screen and (min-width: 640px) {
+    h1#typewriter {
+        font-size: 2.2em;
+    }
+}
+
+// What happens with laptops
+@media only screen and (min-width: 960px) {
+    h1#typewriter {
+        font-size: 2.8em;
+    }
+
+    #subtitle {
+        font-size: 1.7em;
+    }
+}
+
+// 4k displays
+@media only screen and (min-width: 2560px) {
+    h1#typewriter {
+        font-size: 3.2em;
+    }
+
+    #subtitle {
+        font-size: 2.2em;
+    }
 }
 
 </style>

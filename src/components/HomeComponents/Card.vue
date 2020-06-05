@@ -50,13 +50,13 @@ export default {
 }
 
 .uk-card-header h3 {
-  font-size: calc(18px + (64 - 18) * ((100vw - 320px) / (3840 - 320)));
+  font-size: 1.2em;
   font-family: 'Noto Sans', sans-serif;
   color: @text-color;
 }
 
 .uk-card-body p {
-  font-size: calc(14px + (32 - 16) * ((100vw - 320px) / (3840 - 320)));
+  font-size: 1em;
   font-family: 'Noto Sans', sans-serif;
   color: @text-color;
 }
@@ -67,6 +67,8 @@ hr {
   border-color: @brand-color-sister;
 }
 
+// Behaviour for different screens
+
 @media only screen and (min-width: 1920px) {
   .uk-card-header img {
     width: 256px;
@@ -74,9 +76,40 @@ hr {
   }
 }
 
-@media only screen and (min-width: 740px) {
+// Tablet size
+
+@media only screen and (min-width: 640px) {
   .uk-card-header img {
       box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 24px 0 rgba(0, 0, 0, 0.28);
   }
+
+  .uk-card-header h3 {
+    font-size: 1.5em;
+  }
 }
+
+// Laptop screens -- HD / FHD
+
+@media only screen and (min-width: 960px) {
+  .uk-card-header h3 {
+    font-size: 1.8em;
+  }
+
+  .uk-card-body p {
+    font-size: 1.2em;
+  }
+}
+
+// 4k screens
+
+@media only screen and (min-width: 2560px) {
+  .uk-card-header h3 {
+    font-size: 2.3em;
+  }
+
+  .uk-card-body p {
+    font-size: 1.5em;
+  }
+}
+
 </style>

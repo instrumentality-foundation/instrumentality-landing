@@ -22,65 +22,14 @@ This section defines the colors used throughout the landing site as well as the 
 @import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
 
 /**
-* 3. Dimensions
-*/
-
-@max-vw: 3840;
-@min-vw: 320;
-
-
-/**
-* 4. Default UI values
+* 3. Default UI values
 * This section describes a consistent global style for different elements like fonts, link colors, etc.
 */
 
 body {
-    /* background by SVGBackgrounds.com */
-    background: url(./Backgrounds/Sun-Tornado.svg);
-    background-size: cover;
+    background-image: linear-gradient(to right bottom, #ff9650, #fe8d51, #fc8453, #fa7b55, #f77257, #f2665a, #ec5b5e, #e55062, #d84168, #c9336d, #b82772, #a41f76);
+}
+
+@media only screen and (min-width: 760px) {
     background-attachment: fixed;
-}
-
-.uk-navbar-nav li a {
-    color: @text-color;
-    font-size: large;
-    font-family: 'Noto Sans', sans-serif;
-    text-decoration: none;
-    position: relative;
-}
-
-.uk-navbar-nav li a::before { // This is adding a nice underline effect
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: @brand-color;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out 0s;
-}
-
-.uk-navbar-nav li a:hover::before {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-.uk-navbar-nav li a:hover {
-    color: @brand-color;
-}
-
-// Different sizes
-
-@media only screen and (min-width: 2000px) {
-    .uk-navbar-nav li a {
-        font-size: xx-large;
-    }
-}
-
-@media only screen and (max-width: 740px) {
-    body {
-        background-attachment: initial;
-    }
 }

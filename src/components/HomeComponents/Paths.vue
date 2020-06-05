@@ -2,7 +2,7 @@
     <div id="paths">
         
         <!-- This next section describes the prices for using Instrumentality -->
-        <section class="uk-section uk-child-width-expand@m uk-flex uk-flex-middle" uk-grid>
+        <section class="uk-section uk-flex uk-flex-middle">
             <PathCard v-bind:pathName="card1.pathName" v-bind:features="card1.features" v-bind:price="card1.price" />
             <PathCard v-bind:pathName="card2.pathName" v-bind:features="card2.features" v-bind:price="card2.price" />
             <PathCard v-bind:pathName="card3.pathName" v-bind:features="card3.features" v-bind:price="card3.price" />
@@ -42,7 +42,7 @@ export default {
             },
 
             card3: {
-                pathName: "The 'I don't follow your rules' person",
+                pathName: "The tinkerer",
                 features: [
                     {name: 'Configure your own Instrumentality subscripion with whatever you need! (Upcoming)'}
                 ],
@@ -54,5 +54,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
+    .uk-section {
+        flex-direction: column;
+        justify-content: space-around;        
+    }
 
+    @media only screen and (min-width: 960px) {
+        .uk-section {
+            flex-direction: row;
+        }
+    }
 </style>

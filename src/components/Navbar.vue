@@ -59,8 +59,42 @@ export default {
   backdrop-filter: blur(5px);
 }
 
+.uk-navbar-nav li a {
+    color: @text-color;
+    font-size: 1em;
+    font-family: 'Noto Sans', sans-serif;
+    text-decoration: none;
+    position: relative;
+}
+
+.uk-navbar-nav li a::before { // This is adding a nice underline effect
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: @brand-color;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.uk-navbar-nav li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.uk-navbar-nav li a:hover {
+    color: @brand-color;
+}
+
+.uk-logo {
+  font-size: 1.25em;
+}
+
 .uk-logo img {
-  height: 48px;
+  height: 1.25em;
   width: auto;
 }
 
@@ -72,11 +106,41 @@ export default {
   color: @brand-color;
 }
 
-// Diferent screen sizes
-@media only screen and (min-width: 2000px) {
-  .uk-logo img {
-    height: 64px;
-    width: auto;
+// As display size goes up...
+
+// What happens with small and medium devices -- Phones & Tablets
+@media only screen and (max-width: 960px) {
+  .uk-navbar-right, .uk-navbar-center {
+    display: none;
+  }
+}
+
+// What happens with medium sized devices -- Tablets
+@media only screen and (min-width: 640px) {
+  .uk-logo {
+    font-size: 1.50em;
+  }
+}
+
+// What happens with large devices -- Laptops
+@media only screen and (min-width: 960px) {
+  .uk-logo {
+    font-size: 1.75em;
+  }
+
+  .uk-navbar-nav li a {
+    font-size: 1.1em;
+  }
+}
+
+// What happens with extra-large devices -- 4k displays
+@media only screen and (min-width: 2560px) {
+  .uk-logo {
+    font-size: 2em;
+  }
+
+  .uk-navbar-nav li a {
+    font-size: 1.4em;
   }
 }
 </style>
