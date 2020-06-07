@@ -66,6 +66,12 @@ export default {
         font-size: .85em;
     }
 
+    hr::before,
+        hr::after,
+        hr {
+            border-color: @brand-color-sister;
+        }
+
     @media only screen and (min-width: 960px) {
         .pathcard {
             width: 32%;

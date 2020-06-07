@@ -41,7 +41,7 @@ export default {
 .uk-card {
   background: white;
   width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.16);
+  border-bottom: 1px solid rgba(243, 102, 91, 0.75);
 }
 
 .uk-card-header img {
@@ -79,6 +79,10 @@ hr {
 // Tablet size
 
 @media only screen and (min-width: 640px) {
+  .uk-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.16);
+  }
+
   .uk-card-header img {
       box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 24px 0 rgba(0, 0, 0, 0.28);
   }

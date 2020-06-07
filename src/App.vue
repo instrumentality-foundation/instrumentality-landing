@@ -3,12 +3,12 @@
   <div id="app">
 
     <!-- Navigation bar component -->
-    <Navbar></Navbar>
+    <Navbar />
 
     <router-view />
 
     <!-- Footer component with credits and everything -->
-    <!-- TODO: Implement the footer component -->
+    <Footer />
 
   </div>
 
@@ -16,6 +16,7 @@
 
 <script>
 import Navbar from '@/components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
 import UIkit from "uikit";
 import Icons from "uikit/dist/js/uikit-icons";
 
@@ -24,7 +25,8 @@ UIkit.use(Icons);
 export default {
   name: 'App',
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 }
 </script>
