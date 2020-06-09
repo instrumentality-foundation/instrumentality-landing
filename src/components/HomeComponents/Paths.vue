@@ -2,6 +2,7 @@
     <div id="paths">
         
         <!-- This next section describes the prices for using Instrumentality -->
+        <h3 class="uk-text-center uk-margin-small-left uk-margin-small-right">Different paths in life might lead to the same place</h3>
         <section class="uk-section uk-flex uk-flex-middle">
             <PathCard v-bind:pathName="card1.pathName" v-bind:features="card1.features" v-bind:price="card1.price" />
             <PathCard v-bind:pathName="card2.pathName" v-bind:features="card2.features" v-bind:price="card2.price" />
@@ -54,14 +55,35 @@ export default {
 </script>
 
 <style lang="less" scoped>
+    @import "@/assets/theme.less";
+
     .uk-section {
         flex-direction: column;
         justify-content: space-around;        
     }
 
+    h3 {
+        margin-top: 1em;
+        color: #FFF3FF;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 1.5em;
+    }
+
+    // On laptop screens
     @media only screen and (min-width: 960px) {
         .uk-section {
             flex-direction: row;
+        }
+
+        h3 {
+            font-size: 1.75em;
+        }
+    }
+
+    // On 4k screens
+    @media only screen and (min-width: 2560px) {
+        h3 {
+            font-size: 2em;
         }
     }
 </style>

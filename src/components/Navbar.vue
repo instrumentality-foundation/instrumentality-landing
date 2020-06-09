@@ -37,11 +37,44 @@
             <li>
               <a href="">Signup</a>
             </li>
+            <li id="burger-menu">
+              <button class="uk-button uk-button-default uk-button-large" type="button" uk-toggle="target: #offcanvas-nav-primary"><font-awesome-icon :icon="['fa', 'bars']" /></button>
+            </li>
           </ul>
         </div>
       </div>
 
     </nav>
+
+    <!-- This part describes the off-canvas navbar that appears only on mobile devices -->
+    <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true; flip: true;">
+      <div class="uk-offcanvas-bar uk-flex uk-flex-comlumn uk-flex-center">
+        
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+          <li>
+            <a href="">Team updates</a>
+          </li>
+          <li>
+            <a href="">Features</a>
+          </li>
+          <li>
+            <a href="">For developers</a>
+          </li>
+          <li>
+            <hr />
+          </li>
+          <li>
+              <a href="">Login</a>
+            </li>
+            <li>
+              <a href="">Signup</a>
+            </li>
+        </ul>
+
+      </div>
+    </div>
+
+
   </div>
 </template>
 
@@ -54,12 +87,15 @@ export default {
 <style lang="less" scoped>
 @import "../assets/theme.less";
 
-.uk-navbar-container  {
-  background-color: rgba(255, 255, 255, 0.75) !important;
-  backdrop-filter: blur(5px);
+.uk-navbar-container {
+  background-color: white;
 }
 
-.uk-navbar-nav li a {
+.uk-offcanvas-bar {
+  background-color: white;
+}
+
+.uk-navbar-nav li a, .uk-offcanvas-bar .uk-nav li a {
     color: @text-color;
     font-size: 1em;
     font-family: 'Noto Sans', sans-serif;
@@ -67,7 +103,7 @@ export default {
     position: relative;
 }
 
-.uk-navbar-nav li a::before { // This is adding a nice underline effect
+.uk-navbar-nav li a::before, .uk-offcanvas-bar .uk-nav li a::before { // This is adding a nice underline effect
     content: "";
     position: absolute;
     width: 100%;
@@ -80,12 +116,12 @@ export default {
     transition: all 0.3s ease-in-out 0s;
 }
 
-.uk-navbar-nav li a:hover::before {
+.uk-navbar-nav li a:hover::before, .uk-offcanvas-bar .uk-nav li a:hover::before {
     visibility: visible;
     transform: scaleX(1);
 }
 
-.uk-navbar-nav li a:hover {
+.uk-navbar-nav li a:hover, .uk-offcanvas-bar .uk-nav li a:hover {
     color: @brand-color;
 }
 
@@ -106,12 +142,29 @@ export default {
   color: @brand-color;
 }
 
+.uk-offcanvas-bar .uk-nav li hr {
+    border-color: @brand-color-sister;
+    margin-top: 1.5em;
+}
+
 // As display size goes up...
 
 // What happens with small and medium devices -- Phones & Tablets
 @media only screen and (max-width: 960px) {
-  .uk-navbar-right, .uk-navbar-center {
+  .uk-navbar-right li, .uk-navbar-center {
     display: none;
+  }
+
+  .uk-offcanvas-bar .uk-nav li a {
+    font-size: 1.3em;
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+  #burger-menu {
+    visibility: visible;
+    display: block;
+    font-size: 1.5em;
+    text-decoration: none;
   }
 }
 
@@ -130,6 +183,15 @@ export default {
 
   .uk-navbar-nav li a {
     font-size: 1.1em;
+  }
+
+  #burger-menu {
+    display: none;
+  }
+
+  .uk-offcanvas-bar, .uk-navbar-container {
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(5px);
   }
 }
 
