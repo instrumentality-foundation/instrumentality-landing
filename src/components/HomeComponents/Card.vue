@@ -5,11 +5,12 @@
         <div class="uk-card-header">
           <div class="uk-width-1-1">
             <img
-              :src='imageSource'
+              :data-src='imageSource'
               alt="Project Manager"
               width="128px"
               height="128px"
               :style="bgcolor"
+              uk-img
             />
           </div>
           <h3 class="uk-text-center uk-width-1-1">{{header}}</h3>
