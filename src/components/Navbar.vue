@@ -88,7 +88,7 @@ export default {
 @import "../assets/theme.less";
 
 .uk-navbar-container {
-  background-color: white;
+  background-color: white !important;
 }
 
 .uk-offcanvas-bar {
@@ -144,7 +144,9 @@ export default {
 
 .uk-offcanvas-bar .uk-nav li hr {
     border-color: @brand-color-sister;
-    margin-top: 1.5em;
+    margin-top: 1.5em;  .uk-card {
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+  }
 }
 
 // As display size goes up...
@@ -165,6 +167,10 @@ export default {
     display: block;
     font-size: 1.5em;
     text-decoration: none;
+  }
+
+  #burger-menu button {
+    background: white;  
   }
 }
 
@@ -190,8 +196,8 @@ export default {
   }
 
   .uk-offcanvas-bar, .uk-navbar-container {
-    background-color: rgba(255, 255, 255, 0.75) !important;
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(1em) saturate(300%);
   }
 }
 
