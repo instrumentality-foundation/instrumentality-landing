@@ -91,10 +91,6 @@ export default {
   background-color: white !important;
 }
 
-.uk-offcanvas-bar {
-  background-color: white;
-}
-
 .uk-navbar-nav li a, .uk-offcanvas-bar .uk-nav li a {
     color: @text-color;
     font-size: 1em;
@@ -149,6 +145,15 @@ export default {
   }
 }
 
+  .uk-navbar-container {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(1em) saturate(150%);
+  }
+
+  .uk-offcanvas-bar {
+    background-color: white;
+  }
+
 // As display size goes up...
 
 // What happens with small and medium devices -- Phones & Tablets
@@ -170,7 +175,7 @@ export default {
   }
 
   #burger-menu button {
-    background: white;  
+    background: rgba(255, 255, 255, 0);  
   }
 }
 
@@ -193,11 +198,6 @@ export default {
 
   #burger-menu {
     display: none;
-  }
-
-  .uk-offcanvas-bar, .uk-navbar-container {
-    background-color: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: blur(1em) saturate(300%);
   }
 }
 
