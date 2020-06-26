@@ -30,7 +30,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "@/assets/theme.less";
 
 .pathcard {
   width: 80%;

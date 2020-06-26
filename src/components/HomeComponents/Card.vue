@@ -37,7 +37,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "@/assets/theme.less";
 
 .uk-card {
   background: white;

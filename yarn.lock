@@ -4880,7 +4880,7 @@ launch-editor@^2.2.1:
     chalk "^2.3.0"
     shell-quote "^1.6.1"
 
-less-loader@^6.1.0:
+less-loader@^6.1.2:
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/less-loader/-/less-loader-6.1.2.tgz#793f2ab76dea3c4fca6a27f3effceab16fc3cd9a"
   integrity sha512-80g+EURm8H98wirYTNnIJMxVnJU9NYIXRs7rxsghL8C+UyuGzsqDXPgQcLUrNlItMwUviYeBfSOEyULI6iza+g==
@@ -5422,6 +5422,11 @@ node-ipc@^9.1.1:
     event-pubsub "4.3.0"
     js-message "1.0.5"
     js-queue "2.0.0"
+
+node-less@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/node-less/-/node-less-1.0.0.tgz#4843df149c510e85d8c15f4434ed803b736b8029"
+  integrity sha1-SEPfFJxRDoXYwV9ENO2AO3NrgCk=
 
 node-libs-browser@^2.2.1:
   version "2.2.1"

@@ -50,7 +50,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import "@/assets/theme.less";
 
 #footer {
     background: white;
